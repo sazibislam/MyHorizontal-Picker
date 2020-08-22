@@ -6,8 +6,4 @@ Horizontal Number Picker is an Android custom-built View for choosing numbers.(y
 
 visit here for image: MyHorizontal-Picker/app/screen_shoot/
 
-https://github.com/sazibislam/MyHorizontal-Picker/blob/master/app/screen_shoot/screen_shoot.jpg
-
-![Alt text](https://github.com/sazibislam/MyHorizontal-Picker/blob/master/app/screen_shoot/screen_shoot.jpg "screen shoot")
-
 <img src="https://github.com/sazibislam/MyHorizontal-Picker/blob/master/app/screen_shoot/screen_shoot.jpg" height="400" alt="Screenshot"/>
