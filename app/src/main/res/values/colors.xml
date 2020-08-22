@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#3EC300</color>
+    <color name="colorPrimary">#959AA6</color>
+    <color name="colorAccent">#F9C80E</color>
+
+    <color name="colorBorder">#e3e4e4</color>
+    <color name="border_color">#EAEBEB</color>
+    <color name="text_color">#959AA6</color>
+    <color name="text_color_msg">#545863</color>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="bg_color_category">#f9fafb</color>
+    <color name="bg_color_bill_memo">#F9FAFB</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#0A0903</color>
+    <color name="colorRed">#FB3640</color>
+    <color name="btn_border_color">#C4CAD0</color>
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorPremium">#18A378</color>
+
+</resources>
