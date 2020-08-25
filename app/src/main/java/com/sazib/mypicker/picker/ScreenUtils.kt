@@ -6,6 +6,7 @@ import android.util.TypedValue
 import android.view.WindowManager
 
 class ScreenUtils {
+
   companion object {
 
     fun getScreenWidth(context: Context): Int {

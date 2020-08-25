@@ -6,23 +6,23 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.sazib.mypicker.picker.CustomSliderAdapter
+import com.sazib.mypicker.picker.PickerAdapter
 import com.sazib.mypicker.picker.ScreenUtils
-import com.sazib.mypicker.picker.SliderLayoutManager
+import com.sazib.mypicker.picker.PickerLayoutManager
 import kotlinx.android.synthetic.main.activity_main.numberPicker
 
 class MainActivity : AppCompatActivity() {
 
-  private val data = (1..20).toList()
+  private val data = (1..10).toList()
       .map { it.toString() } as ArrayList<String>
   private lateinit var rvHorizontalPicker: RecyclerView
-  private lateinit var sliderAdapter: CustomSliderAdapter
+  private lateinit var sliderAdapter: PickerAdapter
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    setHorizontalPicker()
+    setPicker()
 
 /*
 * for the below picker
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     numberPicker.setMaxValue(24)
   }
 
-  private fun setHorizontalPicker() {
+  private fun setPicker() {
     rvHorizontalPicker = findViewById(R.id.rv_horizontal_picker)
 
     // Setting the padding such that the items will appear in the middle of the screen
@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity() {
     rvHorizontalPicker.setPadding(padding, 0, padding, 0)
 
     // Setting layout manager
-    rvHorizontalPicker.layoutManager = SliderLayoutManager(this).apply {
-      callback = object : SliderLayoutManager.OnItemSelectedListener {
+    rvHorizontalPicker.layoutManager = PickerLayoutManager(this).apply {
+      callback = object : PickerLayoutManager.OnItemSelectedListener {
         override fun onItemSelected(layoutPosition: Int) {
           sliderAdapter.setSelectedItem(layoutPosition)
           Log.d("selected text", data[layoutPosition])
@@ -51,10 +51,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Setting Adapter
-    sliderAdapter = CustomSliderAdapter()
+    sliderAdapter = PickerAdapter()
     rvHorizontalPicker.adapter = sliderAdapter.apply {
       setData(data)
-      callback = object : CustomSliderAdapter.Callback {
+      callback = object : PickerAdapter.Callback {
         override fun onItemClicked(view: View) {
           rvHorizontalPicker.smoothScrollToPosition(
               rvHorizontalPicker.getChildLayoutPosition(

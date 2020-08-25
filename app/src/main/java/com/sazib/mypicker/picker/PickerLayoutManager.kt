@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlin.math.abs
 import kotlin.math.sqrt
 
-class SliderLayoutManager(context: Context?) : LinearLayoutManager(context) {
+class PickerLayoutManager(context: Context?) : LinearLayoutManager(context) {
 
   init {
     orientation = HORIZONTAL
@@ -20,7 +20,7 @@ class SliderLayoutManager(context: Context?) : LinearLayoutManager(context) {
     super.onAttachedToWindow(view)
     recyclerView = view!!
 
-    // Smart snapping
+    // snapping
     LinearSnapHelper().attachToRecyclerView(recyclerView)
   }
 

@@ -1,6 +1,5 @@
 package com.sazib.mypicker.picker
 
-
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.sazib.mypicker.R
 
-class CustomSliderAdapter : RecyclerView.Adapter<SliderItemViewHolder>() {
+class PickerAdapter : RecyclerView.Adapter<PickerItemViewHolder>() {
 
   private val data: ArrayList<String> = ArrayList()
   var callback: Callback? = null
@@ -20,15 +19,15 @@ class CustomSliderAdapter : RecyclerView.Adapter<SliderItemViewHolder>() {
   override fun onCreateViewHolder(
     parent: ViewGroup,
     viewType: Int
-  ): SliderItemViewHolder {
+  ): PickerItemViewHolder {
 
     ctx = parent.context
 
     val itemView: View = LayoutInflater.from(parent.context)
-        .inflate(R.layout.row_view_slider_item, parent, false)
+        .inflate(R.layout.row_view_picker_item, parent, false)
 
     itemView.setOnClickListener(clickListener)
-    return SliderItemViewHolder(itemView)
+    return PickerItemViewHolder(itemView)
   }
 
   override fun getItemCount(): Int {
@@ -36,7 +35,7 @@ class CustomSliderAdapter : RecyclerView.Adapter<SliderItemViewHolder>() {
   }
 
   override fun onBindViewHolder(
-    holder: SliderItemViewHolder,
+    holder: PickerItemViewHolder,
     position: Int
   ) {
     holder.tvItem?.text = data[position]
